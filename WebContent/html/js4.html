@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	var v="123ad_$#";
+	var reg=/\w/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="ad_s1$#";
+	var reg=/\d/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="adbc";
+	var reg=/[a-z]{1}/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="233454";
+	var reg=/^[1-9]\d{4}/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="233454";
+	var reg=/^[A-z].+/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="13822222222";
+	var reg=/^(138|139)\d{8}/;
+	document.write(reg.test(v)+"<br>");
+	
+	
+	var v="lihong@qq.com";
+	var reg=/^\w+@([A-z]{2,}|[0-9]{3,})+(\.[A-z]{2,3}){1,2}/;
+	document.write(reg.test(v)+"<br>");
+	
+
+	function check(){
+		//如果是通过id/class/TagName/Name属性都可以获取相应的数据，但是有更好的方式
+		var f=document.forms;
+		console.log(f);
+		console.log(f.myform);
+		console.log(f.myform.username);
+		console.log(f.myform.username.value);
+		
+		console.log(f.myform.email.value);
+		
+		return false;
+	}
+	
+	
+	function check2(form){
+		var name=form.username.value;
+		var email=form.email.value;
+		var flag=true;
+		console.log(name);
+		console.log(email);
+		
+		//String s="sssss", s.indexOf("$");
+		
+		var sp1=document.getElementById("msg1");
+		var sp2=document.getElementById("msg2");
+		
+		if(name==""||name.indexOf(" ")!=-1){
+			sp1.style.color="red";
+			sp1.innerHTML="用户名不能为空或者包含空格！";
+			flag=false;
+		}
+		
+		var reg1=/^\w+$/;
+		if(!reg1.test(name)){
+			sp1.style.color="red";
+			sp1.innerHTML="用户名不合法！";
+			flag=false;
+		}
+		
+		
+		var reg2=/^\w+@([A-z]{2,}|[0-9]{3,})+(\.[A-z]{2,3}){1,2}/;
+		if(!reg2.test(email)){
+			sp2.style.color="red";
+			sp2.innerHTML="邮箱格式不正确！";
+			flag=false;
+		}
+		console.log(flag);
+		return flag;
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+	<form action="" onsubmit="return check2(this);" method="get" name="myform">
+		姓名：<input type="text" name="username"/><span id="msg1"></span><br>
+		邮箱：<input type="text" name="email"/><span id="msg2"></span><br>
+		<input type="submit" value="注册"/>
+	</form>
+</body>
+</html>
+
+
+
+
+

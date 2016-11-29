@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript">
+	 
+	 //alert("hello,js");
+	 /*
+	 
+	 	多行注释
+		
+	 */
+	 
+	/* var flag=confirm("确定删除吗?");
+	if(flag){
+		alert("删除");
+	}else{
+		alert("取消");		
+	} */
+	
+	//var name=prompt("请输入姓名！","小明");
+	//alert("name="+name);
+	
+	document.write("hello,js");
+	
+	for(var i=0;i<=10;i++){
+		//document.write("hello,js"+i+"<br>");
+		console.log("调试js方法");
+	}
+	
+	var x=true;
+	x="briup";
+	x=123;
+	x=new Date();
+	console.log(typeof(x));
+	
+	var str="hello,briup";
+	console.log(str.length);
+	console.log(str.toUpperCase());
+	
+	//int[] arr=new int[10];
+	//String[] s={"sss","dddd"};
+	
+	var arr=new Array();
+	
+	arr[0]=1;
+	arr[2]=true;
+	arr[3]="briup";
+	arr[4]=new Date();
+	arr[10]="xx";
+	console.log(arr.length);
+	console.log(arr[3]);
+	console.log(arr[1]);
+	console.log("===============================");
+	for(i=0;i<arr.length;i++){
+		console.log(arr[i]);
+	}
+	console.log("===============================");
+	
+	/*
+		for(String s:list){
+			
+			
+		}
+	
+	*/
+	
+	for(x in arr){
+		console.log(arr[x]);
+	}
+	
+	
+	function f1(x){
+		var sum=0;
+		for(var i=0;i<=x;i++){
+			sum+=i;
+		}
+		return sum;
+		//console.log("sum="+sum);
+	}
+	
+	var a=f1(1000);
+	document.write("<font size='6' color='red'>"+a+"</font>");
+	
+	
+	var f2=function(){
+			console.log("匿名函数");
+		}
+	
+	
+</script>
+</head>
+<body>
+		<font color="red" size="6">js测试</font>
+		<a href="javascript:void(0);" onclick="alert('hello');">超链接</a>
+</body>
+</html>

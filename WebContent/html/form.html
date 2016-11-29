@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		background: blue;
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	
+	<!-- 
+		请求的提交有7中，常用的两种get和post提交
+		get和post区别
+		（1）get方式提交,数据会在地址栏中显示，post不会
+		（2）get方式对于敏感数据不安全，传输数据的速度快
+				post方式相对安全，速度慢
+		（3）get方式不合适传输大量数据，post适合传输大量数据
+		（4）get方式数据封装在请求行，post数据封装在请求体
+	
+	 -->
+
+
+	<form action="../param" method="get">
+		姓名：<input type="text" name="username"/><br>
+		密码：<input type="password" name="pwd"/><br>
+		性别：<input type="radio" name="gender"  value="0"/>男
+				  <input type="radio" name="gender"  value="1"/>女
+		技术：<input type="checkbox" name="js" value="corejava">corejava
+					<input type="checkbox" name="js" value="html">html
+					<input type="checkbox" name="js" value="css">css
+					<input type="checkbox" name="js" value="js">js
+		<br>
+		城市：<select name="city">
+						<option value="1">北京</option>
+						<option>上海</option>
+						<option>昆山</option>
+						<option>柳州</option>
+				</select>
+				<br>
+			照片：<input type="file" ><br>
+			简介：<textarea rows="5" cols="10" name="info">.....</textarea>
+			<br>
+			<input type="hidden" name="name" value="briup">
+			<input type="submit" value="注册">
+	</form>
+	<a href="http://localhost:9999?name=briup&age=20&sex=1">提交数据</a>
+	<marquee onmouseover="this.stop();" onmouseout="this.start();"  behavior="alternate" direction="left"><font color="red" size="6">原来我会飞！</font></marquee>
+	<div style="background: red">这是一个div区域</div>
+	<div>这是一个div区域</div>
+	<div>这是一个div区域</div>
+	<span style="background: green;font-size: 20px;">这是一个span区域</span>
+	<span>这是一个span区域</span>
+	<span id="test">这是一个span区域</span>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

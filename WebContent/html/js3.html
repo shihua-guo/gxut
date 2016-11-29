@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//改变元素的内容
+	function test1(){
+		//获取id为msg的input输入框的值
+		var data=document.getElementById("msg").value;
+		console.log(data);
+		//将输入框的值作为div的内容
+		document.getElementById("d1").innerHTML=data;
+	}
+	
+	//改变元素的属性
+	var i=1;
+	function test2(){
+		
+		if(i==4){
+			i=0;
+		}
+		i++;
+		var img=document.getElementById("image");
+		img.src="../image/"+i+".png";
+	}
+	
+	//改变元素的CSS属性
+	function test3(){
+		var arr=["red","green","blue","#D23DF8"];
+		var index=parseInt(Math.random()*4);
+		var info=document.getElementById("info");
+		info.style.color=arr[index];
+	}
+	
+	function test4(){
+		var info=document.getElementById("info");
+		info.style.display="none";
+	}
+	
+	function test5(){
+		var info=document.getElementById("info");
+		info.style.display="block";
+	}
+	
+	function test6(){
+		var p=document.createElement("p");//<p>xxx</p>
+		
+		var text=document.createTextNode("大家好！");
+		
+		p.appendChild(text);
+		
+		var parent=document.getElementById("add");
+		
+		parent.appendChild(p);
+		
+	}
+	
+	
+	function test7(){
+		var p=document.getElementById("pp");
+		var parent=document.getElementById("add");
+		parent.removeChild(p);
+	}
+</script>
+</head>
+<body>
+	<div id="d1"></div><br>
+	<input type="text" id="msg" />
+	<input type="button" value="test1" onclick="test1()">	
+	<hr>
+	<img alt="找不到图片" src="../image/1.png" width="200" height="200" id="image">
+	<input type="button" value="next" onclick="test2()"><br>	
+	<input type="button" value="change" onclick="test3()">	
+	<input type="button" value="hidden" onclick="test4()">	
+	<input type="button" value="show" onclick="test5()">	
+	<div id="info">广西科技大学</div>
+	<hr>
+	<input type="button" value="add" onclick="test6()">
+	<input type="button" value="del" onclick="test7()">
+	<div id="add"><p id="pp">我是一个段落内容</p></div>
+	
+	
+</body>
+</html>

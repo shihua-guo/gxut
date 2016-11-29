@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* div{
+		background: red;
+		width: 200px;
+		height: 100px;
+	} */
+	
+	.sp{
+		font-size: 20px;
+		font-family: cursive;
+	}
+	
+	
+	#test{
+		background: blue;
+	}
+	
+	#hh{
+		background: green;
+	}
+	
+/* 	*{
+		padding: 0px;
+		margin: 0px;
+	} 
+*/	
+	table{
+		width: 200px;
+		height: 200px;
+		border: 1px solid red;
+		text-align: center;
+		border-collapse: collapse;
+	}
+	
+	table td{
+		border: 1px solid #4E2B6B;
+	}
+	
+	/*LVHA*/
+	a:LINK {
+		background: silver;
+	}
+	
+	a:HOVER {
+		font-size: 50px;
+	}
+	a:ACTIVE {
+		background: red;
+	}
+	a:VISITED {
+		background: green;
+	}
+	
+	/* div:HOVER {
+		background: green;
+	}
+	 */
+	input[type='text']{
+		background: red;
+		border-radius: 10px;
+	}
+	
+	.pr1{
+		background: blue;
+	}
+	
+	#pr{
+		background: black;
+	}
+	
+	a{
+		text-decoration: none;
+	}
+	
+	ul{
+		list-style: none;
+	}
+	
+	#block{
+		background: red;
+		display: inline;
+	}
+	
+	#line{
+		background: blue;
+		display: block;
+	}
+</style>
+</head>
+<!-- 选择器的优先级
+
+	style属性>id选择器>class选择器>标签选择器
+ -->
+<body>
+	<div>CSS样式表的学习</div>
+	<a href="" class="sp">超链接</a>
+	<div>CSS样式表的学习</div>
+	<span class="sp">这是一个span区域</span>
+	<p class="sp">这是一个段落标签</p>
+	<div id="test"></div>
+	<h1 id="hh">一级标题</h1>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<a id="aa" href="javascript:void(0);">伪类选择器</a><br>
+	<input type="text">
+	<input type="password">
+	<hr>
+	<div id="pr" class="pr1" style="background: green">优先级测试</div>
+	<ul>
+		<li>列表一</li>
+		<li>列表一</li>
+		<li>列表一</li>
+		<li>列表一</li>
+	</ul>
+	<ol type="2" start="5">
+		<li>列表一</li>
+		<li>列表一</li>
+		<li>列表一</li>
+		<li>列表一</li>
+	</ol>
+	<hr>
+	<div id="block">这是一个块元素</div>
+	<span id="line">这是一个行内元素</span>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
